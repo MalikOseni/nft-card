@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(217deg, 54%, 11%);
+  overflow-x: hidden;
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 60%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 3%;
+  width: 60%;
+  background: hsl(216deg, 50%, 16%);
+  border-radius: 20px;
+}
+
+.image {
+  margin: 0 auto;
+  max-height: 600px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(178deg, 100%, 50%) url(./images/icon-view.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.image:hover::after {
+  visibility: visible;
+}
+
+.image img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.nft-content {
+  margin-top: 1rem;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+}
+
+.nft-content h3 {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.nft-content h3:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+
+.nft-content p {
+  font-size: 18px !important;
+  padding: 0.5rem 0;
+  color: hsl(215deg, 51%, 70%);
+}
+
+.prices {
+  color: hsl(178deg, 100%, 50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+span.time {
+  color: hsl(215deg, 51%, 70%);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+span.coin {
+  display: flex;
+  align-items: center;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.creator p {
+  padding-left: 0.5rem;
+  color: hsl(215deg, 51%, 70%);
+}
+
+span .clock {
+  margin-right: 7px;
+}
+
+span.white {
+  color: hsl(0deg, 0%, 100%);
+}
+
+span.white:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 100%;
+  }
+  .container {
+    width: 74%;
+  }
+}/*# sourceMappingURL=style.css.map */
